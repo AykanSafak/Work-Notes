@@ -10,7 +10,7 @@ namespace AdoNetDemo
 {
     internal class ProductDal
     {
-        public List<Product> GetAll() 
+        public DataTable GetAll() 
         {
             //@ tamamen string olarak kaydet
             //initial catalog = hangi katalog
@@ -26,6 +26,10 @@ namespace AdoNetDemo
             SqlDataReader reader = command.ExecuteReader();
             
             DataTable dataTable=new DataTable();
+            dataTable.Load(reader);
+            reader.Close();
+            connection.Close();
+            return dataTable;
         }
 
     }
