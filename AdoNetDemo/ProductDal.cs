@@ -28,7 +28,7 @@ namespace AdoNetDemo
             {
                 _connection.Open();
             }
-            SqlCommand command = new SqlCommand("Select * from Products",_connection);
+            SqlCommand command = new SqlCommand("Select * from Products", _connection);
 
             SqlDataReader reader = command.ExecuteReader();
             
@@ -51,7 +51,7 @@ namespace AdoNetDemo
             return products;
         }
 
-        //Ekleme Operasyonu
+        ////Ekleme Operasyonu
         public void Add(Product product)
         {
             //Sql string ile yazmak burada saldırılara açık olmayı kolaylaştırır.
@@ -77,6 +77,19 @@ namespace AdoNetDemo
             command.Parameters.AddWithValue("@unitPrice", product.UnitPrice);
             command.Parameters.AddWithValue("@stockAmount", product.StockAmount);
             command.Parameters.AddWithValue("@id", product.Id);
+            command.ExecuteNonQuery();
+
+            _connection.Close();
+        }
+
+        //Güncelleme Operasyonu
+        public void Delete(int id)
+        {
+            //Where cmd olarak eklenmezse tüm productslara zarar verebilir.
+            ConnectionControl();
+            SqlCommand command = new SqlCommand(
+                "Delete from Products where Id=@id", _connection);
+            command.Parameters.AddWithValue("@id", id);
             command.ExecuteNonQuery();
 
             _connection.Close();
