@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.11.35222.181
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12201.205 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Work Notes", "Work Notes\Work Notes.csproj", "{89E26E61-833E-4F8C-A87E-08D8FF2ED56E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetDemo", "AdoNetDemo\AdoNetDemo.csproj", "{06434D91-82BE-405D-A3A0-C273BDD1A876}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkDemo", "EntityFrameworkDemo\EntityFrameworkDemo.csproj", "{6B059853-1D27-48B7-BD55-3863D6619A50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{06434D91-82BE-405D-A3A0-C273BDD1A876}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06434D91-82BE-405D-A3A0-C273BDD1A876}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06434D91-82BE-405D-A3A0-C273BDD1A876}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B059853-1D27-48B7-BD55-3863D6619A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B059853-1D27-48B7-BD55-3863D6619A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B059853-1D27-48B7-BD55-3863D6619A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B059853-1D27-48B7-BD55-3863D6619A50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

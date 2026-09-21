@@ -13,10 +13,7 @@ namespace AdoNetDemo
         //DataTable daha çok enerji ister/yük bindirir.
         //@ tamamen string olarak kaydet
         //initial catalog = hangi katalog
-        SqlConnection _connection = new SqlConnection(@"server=(localdb)\MSSQLLocalDB;initial catalog= ETrade;integrated security=true");
-
-        
-        
+        SqlConnection _connection = new SqlConnection(@"server=(localdb)\mssqllocaldb;initial catalog= ETrade;integrated security=true");
         public List<Product> GetAll() 
         {
             
